@@ -1,0 +1,92 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "7c3b3514819be3334704",
+  "position": {
+    "x": 50,
+    "y": 158,
+    "z": 2,
+    "height": 90,
+    "width": 176.796875,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "■ ",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "color": "#2f9e8a",
+                      "fontFamily": "Segoe UI"
+                    }
+                  },
+                  {
+                    "value": "Complete",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#1f2a37",
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "■ ",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "color": "#d9a21b",
+                      "fontFamily": "Segoe UI"
+                    }
+                  },
+                  {
+                    "value": "Newly added",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#1f2a37",
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "■ ",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "color": "#cf3b26",
+                      "fontFamily": "Segoe UI"
+                    }
+                  },
+                  {
+                    "value": "Non-compliant",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#1f2a37",
+                      "fontFamily": "Segoe UI"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "annotations": [
+    {
+      "name": "plotlay.legendFor",
+      "value": "52ccddb44a95f943197f"
+    }
+  ]
+}
