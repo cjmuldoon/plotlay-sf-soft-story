@@ -24,6 +24,11 @@ table Parcels
 		formatString: #,0
 		lineageTag: d59b7d8f-ed1a-6ac3-c8ee-11a1aa71c9a0
 
+	/// For the map: each status as a code (1 complete, 2 newly added, 3 non-compliant), coloured on a gradient
+	measure 'Status code' = SWITCH ( SELECTEDVALUE ( Parcels[status] ), "Complete", 1, "Newly added", 2, "Non-compliant", 3 )
+		formatString: 0
+		lineageTag: f7ec385a-c304-193c-3a09-0fdff01e1fe3
+
 	column blklot
 		dataType: string
 		lineageTag: c7a13564-de0a-efb8-d46a-804e938b407a

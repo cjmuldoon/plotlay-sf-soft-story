@@ -32,22 +32,22 @@
             }
           ]
         },
-        "Series": {
+        "Value": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "Parcels"
                     }
                   },
-                  "Property": "status"
+                  "Property": "Status code"
                 }
               },
-              "queryRef": "Parcels.status",
-              "nativeQueryRef": "status",
-              "displayName": "Status"
+              "queryRef": "Parcels.Status code",
+              "nativeQueryRef": "Status code",
+              "displayName": "Status code"
             }
           ]
         },
@@ -72,6 +72,26 @@
               "queryRef": "Min(Parcels.address)",
               "nativeQueryRef": "address",
               "displayName": "Address"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Parcels"
+                        }
+                      },
+                      "Property": "status"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Parcels.status)",
+              "nativeQueryRef": "status",
+              "displayName": "Status"
             }
           ]
         }
@@ -92,7 +112,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Parcels by status'"
+                  "Value": "'Parcels by status: green complete, gold newly added, red non-compliant'"
                 }
               }
             },
@@ -229,6 +249,80 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fillRule": {
+              "linearGradient3": {
+                "min": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#2f9e8a'"
+                      }
+                    }
+                  },
+                  "value": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "1D"
+                      }
+                    }
+                  }
+                },
+                "mid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#d9a21b'"
+                      }
+                    }
+                  },
+                  "value": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "2D"
+                      }
+                    }
+                  }
+                },
+                "max": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#cf3b26'"
+                      }
+                    }
+                  },
+                  "value": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "3D"
+                      }
+                    }
+                  }
+                },
+                "nullColoringStrategy": {
+                  "strategy": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'specificColor'"
+                      }
+                    }
+                  },
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'#cfcac0'"
+                      }
+                    }
+                  }
                 }
               }
             }
