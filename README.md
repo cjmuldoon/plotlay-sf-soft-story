@@ -1,5 +1,7 @@
 # How far has San Francisco's soft-story retrofit program got?
 
+San Francisco requires wood-frame apartment buildings built before 1978, with five or more homes and two or more storeys over a weak ground floor of garages or shops, to be strengthened against earthquakes.
+
 Every building on San Francisco's Mandatory Soft Story Retrofit Program list, parcel by parcel, by the year its retrofit was finished, against the state's mapped liquefaction zones. **Live version, with an interactive map:** [getplotlay.com/showcase/sf-soft-story](https://www.getplotlay.com/showcase/sf-soft-story/)
 
 ![Soft-story parcels in the Marina, 2026](visuals/marina_2026_16x9.png)
