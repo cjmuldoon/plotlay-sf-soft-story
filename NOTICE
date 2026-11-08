@@ -39,6 +39,11 @@ UPSTREAM SOURCES
   Base map in the Plotlay project and the app screenshots
     USGS The National Map: US Topo (public domain).
 
+POWER BI MAP CONTEXT
+  The Shape Map in powerbi/ draws census tract boundaries round the parcels, with water cut out: US Census Bureau,
+  TIGERweb (Census Tracts and Areal Hydrography), public domain, generalised and cut to the map frame. Water itself is
+  the map background showing where no land is drawn.
+
 NOT INCLUDED
   Nothing in this repository is derived from OpenStreetMap. No imagery was traced, and no Google, Nearmap, Esri or
   Mapbox imagery was used. Nothing here implies endorsement by the City and County of San Francisco, the Department
