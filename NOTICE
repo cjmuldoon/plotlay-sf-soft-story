@@ -1,0 +1,49 @@
+How far has San Francisco's soft-story retrofit program got, and are the buildings on liquefiable ground done?
+Copyright 2026 Craig Muldoon. Made with Plotlay (https://www.getplotlay.com).
+
+This repository contains code, data we made, and data from the sources below.
+
+CODE
+  The notebook and the Power BI project (its Power Query, DAX and report files) are licensed under the MIT licence
+  (LICENSE).
+
+DATA WE MADE
+  The tables in data/tables/ (each parcel's tier, status, retrofit completion date and liquefaction flag; the parcels
+  by year; the share done each year), the parcel and zone shapes in data/geometry/ and the visuals are licensed under
+  Creative Commons Attribution 4.0 International (LICENSE-DATA). Please credit: "Soft-story retrofits: Plotlay
+  (getplotlay.com), from DataSF and California Geological Survey data". They are made from the sources below, whose
+  credits also apply.
+
+UPSTREAM SOURCES
+
+  DataSF, data.sfgov.org, City and County of San Francisco. DataSF's Terms of Use (section IX) say: "Data is made
+  available under the Public Domain Dedication and License v1.0, unless a file or page says otherwise." Each dataset
+  below states the Open Data Commons Public Domain Dedication and License (PDDL),
+  https://opendatacommons.org/licenses/pddl/1.0/
+    - Soft-Story Properties (Mandatory Soft Story Program), dataset beah-shgi, data as of 7 October 2026.
+      https://data.sfgov.org/d/beah-shgi
+    - Building Permits, dataset i98e-djp9: the permits whose description names the soft story retrofit work.
+      https://data.sfgov.org/d/i98e-djp9
+    - Parcels - Active and Retired, dataset acdm-wktn: the outlines of the listed parcels.
+      https://data.sfgov.org/d/acdm-wktn
+    Changes: one row per parcel (a parcel listed under two addresses keeps the least finished status); each parcel's
+    completion date is the earliest completed date of a completed soft story permit on it; parcels joined to their
+    outlines by block and lot.
+
+  California Department of Conservation, California Geological Survey: CGS Seismic Hazards Program, Liquefaction
+  Zones (Seismic Hazard Zones). Listed on data.ca.gov under Creative Commons Attribution,
+  https://data.ca.gov/dataset/cgs-liquefaction-zones
+  Changes: the zones in San Francisco merged into one area and split into its separate pieces (43 over 0.2 ha); a
+  parcel counts as in a zone when a point inside it is.
+
+  Base map in the Plotlay project and the app screenshots
+    USGS The National Map: US Topo (public domain).
+
+NOT INCLUDED
+  Nothing in this repository is derived from OpenStreetMap. No imagery was traced, and no Google, Nearmap, Esri or
+  Mapbox imagery was used. Nothing here implies endorsement by the City and County of San Francisco, the Department
+  of Building Inspection or the California Geological Survey.
+
+THIRD-PARTY SOFTWARE
+  The notebook uses pandas, GeoPandas, Shapely, pyproj and Matplotlib (installed from requirements.txt, each under its
+  own licence). Fonts in the visuals: IBM Plex Sans and IBM Plex Sans Condensed, SIL Open Font License 1.1.

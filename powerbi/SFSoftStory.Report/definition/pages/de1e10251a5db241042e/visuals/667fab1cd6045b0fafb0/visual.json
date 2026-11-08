@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "667fab1cd6045b0fafb0",
+  "position": {
+    "x": 1580,
+    "y": 270,
+    "z": 1,
+    "height": 140,
+    "width": 300,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Parcels"
+                    }
+                  },
+                  "Property": "In a liquefaction zone"
+                }
+              },
+              "queryRef": "Parcels.In a liquefaction zone",
+              "nativeQueryRef": "In a liquefaction zone"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'In a liquefaction zone'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

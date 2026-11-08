@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "26c39e1543cb24c153d3",
+  "position": {
+    "x": 40,
+    "y": 1030,
+    "z": 99,
+    "height": 40,
+    "width": 1840,
+    "tabOrder": 99
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Soft-Story Properties (7 Oct 2026), Building Permits, Parcels: DataSF, PDDL. Liquefaction zones: California Geological Survey, CC BY. Completion years from the soft story permits. Made with Plotlay (getplotlay.com).",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "#5b6573"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
