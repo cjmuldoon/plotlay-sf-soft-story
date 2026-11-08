@@ -112,7 +112,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Parcels by status: green complete, gold newly added, red non-compliant'"
+                  "Value": "'Parcels by status'"
                 }
               }
             },
