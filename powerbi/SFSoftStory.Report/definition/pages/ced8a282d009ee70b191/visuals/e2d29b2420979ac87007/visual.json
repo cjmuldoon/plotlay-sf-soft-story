@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Years.year",
-              "nativeQueryRef": "year"
+              "nativeQueryRef": "year",
+              "displayName": "Year"
             }
           ]
         },
@@ -35,20 +36,39 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
                       "Entity": "Years"
                     }
                   },
-                  "Property": "done_that_year"
+                  "Property": "Finished that year"
                 }
               },
-              "queryRef": "Years.done_that_year",
-              "nativeQueryRef": "done_that_year"
+              "queryRef": "Years.Finished that year",
+              "nativeQueryRef": "Finished that year",
+              "displayName": "Parcels finished"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Years"
+                  }
+                },
+                "Property": "year"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -66,7 +86,55 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Finished each year (all parcels)'"
+                  "Value": "'Parcels finished each year (all parcels)'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -119,7 +187,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "All"
+                          "Value": "'All'"
                         }
                       }
                     ]

@@ -3,9 +3,9 @@
   "name": "b17da668c202ecb6f56e",
   "position": {
     "x": 1260,
-    "y": 430,
+    "y": 440,
     "z": 1,
-    "height": 580,
+    "height": 570,
     "width": 620,
     "tabOrder": 1
   },
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Parcels.tier",
-              "nativeQueryRef": "tier"
+              "nativeQueryRef": "tier",
+              "displayName": "Tier"
             }
           ]
         },
@@ -45,10 +46,29 @@
                 }
               },
               "queryRef": "Parcels.Share complete",
-              "nativeQueryRef": "Share complete"
+              "nativeQueryRef": "Share complete",
+              "displayName": "Share complete"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Parcels"
+                  }
+                },
+                "Property": "tier"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -67,6 +87,54 @@
               "expr": {
                 "Literal": {
                   "Value": "'Share complete by tier'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

@@ -27,11 +27,12 @@
                 }
               },
               "queryRef": "Parcels.blklot",
-              "nativeQueryRef": "blklot"
+              "nativeQueryRef": "blklot",
+              "displayName": "Parcel (block and lot)"
             }
           ]
         },
-        "Legend": {
+        "Series": {
           "projections": [
             {
               "field": {
@@ -45,7 +46,32 @@
                 }
               },
               "queryRef": "Parcels.status",
-              "nativeQueryRef": "status"
+              "nativeQueryRef": "status",
+              "displayName": "Status"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Parcels"
+                        }
+                      },
+                      "Property": "address"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Parcels.address)",
+              "nativeQueryRef": "address",
+              "displayName": "Address"
             }
           ]
         }
@@ -66,7 +92,70 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Parcels by status (custom map: data/geometry/soft_story_parcels.topojson, key blklot)'"
+                  "Value": "'Parcels by status'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "shape": [
+        {
+          "properties": {
+            "datasourceType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'file_upload'"
+                }
+              }
+            },
+            "mapUrl": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            },
+            "map": {
+              "geoJson": {
+                "type": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'packaged'"
+                    }
+                  }
+                },
+                "name": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'soft_story_parcels.topojson'"
+                    }
+                  }
+                },
+                "content": {
+                  "expr": {
+                    "ResourcePackageItem": {
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "soft_story_parcels.topojson"
+                    }
+                  }
+                }
+              }
+            },
+            "projectionEnum": {
+              "expr": {
+                "Literal": {
+                  "Value": "'mercator'"
                 }
               }
             }

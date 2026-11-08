@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Years.year",
-              "nativeQueryRef": "year"
+              "nativeQueryRef": "year",
+              "displayName": "Year"
             }
           ]
         },
@@ -45,7 +46,8 @@
                 }
               },
               "queryRef": "Years.Share done",
-              "nativeQueryRef": "Share done"
+              "nativeQueryRef": "Share done",
+              "displayName": "Share done"
             }
           ]
         },
@@ -63,10 +65,29 @@
                 }
               },
               "queryRef": "Years.group",
-              "nativeQueryRef": "group"
+              "nativeQueryRef": "group",
+              "displayName": "Parcels"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Years"
+                  }
+                },
+                "Property": "year"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -84,7 +105,63 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Share done by year'"
+                  "Value": "'Share done by the end of each year'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }

@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Parcels.blklot",
-              "nativeQueryRef": "blklot"
+              "nativeQueryRef": "blklot",
+              "displayName": "Parcel (block and lot)"
             },
             {
               "field": {
@@ -41,7 +42,8 @@
                 }
               },
               "queryRef": "Parcels.address",
-              "nativeQueryRef": "address"
+              "nativeQueryRef": "address",
+              "displayName": "Address"
             },
             {
               "field": {
@@ -55,7 +57,8 @@
                 }
               },
               "queryRef": "Parcels.tier",
-              "nativeQueryRef": "tier"
+              "nativeQueryRef": "tier",
+              "displayName": "Tier"
             },
             {
               "field": {
@@ -69,7 +72,8 @@
                 }
               },
               "queryRef": "Parcels.status",
-              "nativeQueryRef": "status"
+              "nativeQueryRef": "status",
+              "displayName": "Status"
             },
             {
               "field": {
@@ -83,7 +87,8 @@
                 }
               },
               "queryRef": "Parcels.completed",
-              "nativeQueryRef": "completed"
+              "nativeQueryRef": "completed",
+              "displayName": "Completed"
             },
             {
               "field": {
@@ -97,10 +102,29 @@
                 }
               },
               "queryRef": "Parcels.liquefaction",
-              "nativeQueryRef": "liquefaction"
+              "nativeQueryRef": "liquefaction",
+              "displayName": "Liquefaction zone"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Parcels"
+                  }
+                },
+                "Property": "blklot"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": false
       }
     },
     "drillFilterOtherVisuals": true,
@@ -119,6 +143,127 @@
               "expr": {
                 "Literal": {
                   "Value": "'Parcels'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "208.3D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Parcels.blklot"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "661.9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Parcels.address"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "116.7D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Parcels.tier"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "306.9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Parcels.status"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "247.8D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Parcels.completed"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "264.3D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Parcels.liquefaction"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

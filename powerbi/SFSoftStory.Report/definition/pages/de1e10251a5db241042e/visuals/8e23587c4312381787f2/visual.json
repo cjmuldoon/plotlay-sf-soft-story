@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "8e23587c4312381787f2",
   "position": {
-    "x": 1460,
+    "x": 1580,
     "y": 24,
     "z": 1,
-    "height": 64,
-    "width": 420,
+    "height": 72,
+    "width": 300,
     "tabOrder": 1
   },
   "visual": {
@@ -27,7 +27,9 @@
                 }
               },
               "queryRef": "Parcels.liquefaction",
-              "nativeQueryRef": "liquefaction"
+              "nativeQueryRef": "liquefaction",
+              "displayName": "Liquefaction zone",
+              "active": true
             }
           ]
         }
@@ -41,14 +43,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Liquefaction zone'"
+                  "Value": "false"
                 }
               }
             }
@@ -63,7 +58,7 @@
             "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "'Basic'"
+                  "Value": "'Dropdown'"
                 }
               }
             }
@@ -77,6 +72,46 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
                 }
               }
             }

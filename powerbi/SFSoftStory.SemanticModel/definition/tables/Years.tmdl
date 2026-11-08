@@ -1,10 +1,17 @@
 table Years
 	lineageTag: e4a00407-f4e1-4849-a66f-076123f38494
 
-	/// Share of the group's parcels with a completed retrofit permit by the end of the year
-	measure 'Share done' = AVERAGE ( Years[share_done] )
+	/// Share of the group's parcels with a completed retrofit permit by the end of the year shown (the latest, 2026, when none is)
+	measure 'Share done' =
+			VAR y = MAX ( Years[year] )
+			RETURN CALCULATE ( AVERAGE ( Years[share_done] ), Years[year] = y )
 		formatString: 0.0%
 		lineageTag: 14682511-d05f-f631-1840-d4c9d8f6b0c1
+
+	/// Parcels whose first completed soft story permit is in the year
+	measure 'Finished that year' = SUM ( Years[done_that_year] )
+		formatString: #,0
+		lineageTag: acaa9874-17bf-b87a-ba33-3ace31aad4f3
 
 	column year
 		dataType: int64
