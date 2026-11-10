@@ -24,6 +24,10 @@ table Parcels
 		formatString: #,0
 		lineageTag: d59b7d8f-ed1a-6ac3-c8ee-11a1aa71c9a0
 
+	/// The map tooltip: the address of a parcel, or how many complete parcels share the dot group
+	measure 'On the map' = IF ( HASONEVALUE ( Parcels[blklot] ), SELECTEDVALUE ( Parcels[address] ), FORMAT ( COUNTROWS ( Parcels ), "#,0" ) & " parcels, all complete" )
+		lineageTag: 2c4ee6b6-2865-48d4-7d05-d7903a368c78
+
 	/// For the map: each status as a code (1 complete, 2 newly added, 3 non-compliant), coloured on a gradient
 	measure 'Status code' = SWITCH ( SELECTEDVALUE ( Parcels[status] ), "Complete", 1, "Newly added", 2, "Non-compliant", 3 )
 		formatString: 0
@@ -95,6 +99,14 @@ table Parcels
 
 		annotation SummarizationSetBy = Automatic
 
+	column map_key
+		dataType: string
+		lineageTag: 0b36eb14-c544-a46e-05e3-0b62fac12304
+		summarizeBy: none
+		sourceColumn: map_key
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Parcels = m
 		mode: import
 		source =
@@ -102,8 +114,11 @@ table Parcels
 				    Source = Csv.Document(GetFile("tables/parcels.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
 				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Kept = Table.SelectColumns(Promoted, {"blklot", "tier", "status", "address", "completed", "year_done", "liquefaction", "liq_share"}),
-				    Typed = Table.TransformColumnTypes(Kept, {{"blklot", type text}, {"tier", type text}, {"status", type text}, {"address", type text}, {"completed", type text}, {"year_done", Int64.Type}, {"liquefaction", type text}, {"liq_share", type number}}, "en-US")
+				    Typed = Table.TransformColumnTypes(Kept, {{"blklot", type text}, {"tier", type text}, {"status", type text}, {"address", type text}, {"completed", type text}, {"year_done", Int64.Type}, {"liquefaction", type text}, {"liq_share", type number}}, "en-US"),
+				    Keys = Table.PromoteHeaders(Csv.Document(GetFile("tables/parcel_map_keys.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]), [PromoteAllScalars = true]),
+				    Joined = Table.NestedJoin(Typed, {"blklot"}, Keys, {"blklot"}, "K", JoinKind.LeftOuter),
+				    Expanded = Table.ExpandTableColumn(Joined, "K", {"map_key"})
 				in
-				    Typed
+				    Expanded
 
 	annotation PBI_ResultType = Table

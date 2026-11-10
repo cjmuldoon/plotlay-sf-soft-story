@@ -23,12 +23,12 @@
                       "Entity": "Parcels"
                     }
                   },
-                  "Property": "blklot"
+                  "Property": "map_key"
                 }
               },
-              "queryRef": "Parcels.blklot",
-              "nativeQueryRef": "blklot",
-              "displayName": "Parcel (block and lot)"
+              "queryRef": "Parcels.map_key",
+              "nativeQueryRef": "map_key",
+              "displayName": "Map group"
             }
           ]
         },
@@ -55,23 +55,18 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Parcels"
-                        }
-                      },
-                      "Property": "address"
+                    "SourceRef": {
+                      "Entity": "Parcels"
                     }
                   },
-                  "Function": 3
+                  "Property": "On the map"
                 }
               },
-              "queryRef": "Min(Parcels.address)",
-              "nativeQueryRef": "address",
-              "displayName": "Address"
+              "queryRef": "Parcels.On the map",
+              "nativeQueryRef": "On the map",
+              "displayName": "On the map"
             },
             {
               "field": {

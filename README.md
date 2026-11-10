@@ -50,7 +50,7 @@ The city publishes the list (each building's tier and status today) and every bu
 | Folder | What |
 |---|---|
 | [`data/geometry/`](data/geometry) | The parcels (key `blklot`) and the liquefaction zones from Plotlay: GeoJSON, TopoJSON, CSV with WKT |
-| [`data/tables/`](data/tables) | `parcels.csv` (tier, status, completion date and year, liquefaction), `parcels_by_year.csv` (what the slider shows), `share_done_by_year.csv` |
+| [`data/tables/`](data/tables) | `parcels.csv` (tier, status, completion date and year, liquefaction), `parcels_by_year.csv` (what the slider shows), `share_done_by_year.csv`, `parcel_map_keys.csv` (the Power BI map's grouping) |
 | [`python/`](python) | A narrated notebook that recomputes every number here: [`soft_story_retrofits.ipynb`](python/soft_story_retrofits.ipynb) |
 | [`powerbi/`](powerbi) | A Power BI Project (`.pbip`). Start with [`powerbi/OPEN-ME.md`](powerbi/OPEN-ME.md) |
 | [`visuals/`](visuals) | The map pictures and charts, made in Plotlay from the same layers |
