@@ -2,16 +2,16 @@ table Parcels
 	lineageTag: 3e9e1484-cdd8-72f4-8f21-8fcf0a0ac882
 
 	/// Parcels on the Mandatory Soft Story Program list
-	measure Parcels = COUNTROWS ( Parcels )
+	measure 'Parcel count' = COUNTROWS ( Parcels )
 		formatString: #,0
-		lineageTag: a491721d-a656-beb4-21a4-b632f0b201d6
+		lineageTag: 98accead-cc6b-2885-0e7d-ad7034093262
 
 	/// Listed as Work Complete, CFC Issued
 	measure Complete = CALCULATE ( COUNTROWS ( Parcels ), Parcels[status] = "Complete" )
 		formatString: #,0
 		lineageTag: fbdbe202-eae9-d867-9246-6c792d3539d4
 
-	measure 'Share complete' = DIVIDE ( [Complete], [Parcels] )
+	measure 'Share complete' = DIVIDE ( [Complete], [Parcel count] )
 		formatString: 0.0%
 		lineageTag: 2880acb8-4d02-7b16-19fd-34f8060a36be
 

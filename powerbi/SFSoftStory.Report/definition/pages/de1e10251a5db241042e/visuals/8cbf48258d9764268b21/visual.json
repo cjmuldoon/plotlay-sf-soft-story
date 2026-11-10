@@ -3,9 +3,9 @@
   "name": "8cbf48258d9764268b21",
   "position": {
     "x": 1260,
-    "y": 110,
+    "y": 128,
     "z": 1,
-    "height": 150,
+    "height": 132,
     "width": 300,
     "tabOrder": 1
   },
@@ -23,12 +23,12 @@
                       "Entity": "Parcels"
                     }
                   },
-                  "Property": "Parcels"
+                  "Property": "Parcel count"
                 }
               },
-              "queryRef": "Parcels.Parcels",
-              "nativeQueryRef": "Parcels",
-              "displayName": "Parcels"
+              "queryRef": "Parcels.Parcel count",
+              "nativeQueryRef": "Parcel count",
+              "displayName": "Parcel count"
             }
           ]
         }

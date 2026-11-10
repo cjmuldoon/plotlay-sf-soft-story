@@ -35,7 +35,7 @@ On **Year by year** the three lines end in 2026 at 86.1% (all parcels), 85.5% (i
 
 ## The model
 
-- **Parcels**: one row per parcel (`data/tables/parcels.csv`) with its tier, status, completion date and ground. Measures: `Parcels`, `Complete`, `Share complete`, `Non-compliant`, `In a liquefaction zone`.
+- **Parcels**: one row per parcel (`data/tables/parcels.csv`) with its tier, status, completion date and ground. Measures: `Parcel count`, `Complete`, `Share complete`, `Non-compliant`, `In a liquefaction zone`.
 - **Years**: the share done by year for all parcels, in and out of liquefaction zones (`share_done_by_year.csv`), with `Share done` (always one year: the point of the line, or 2026 when no year is in the filter) and `Finished that year`.
 
 ## The map
