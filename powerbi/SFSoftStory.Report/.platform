@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SFSoftStory"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "ec390f4e-2861-430b-be1e-5e054dc372f4"
+  }
+}
