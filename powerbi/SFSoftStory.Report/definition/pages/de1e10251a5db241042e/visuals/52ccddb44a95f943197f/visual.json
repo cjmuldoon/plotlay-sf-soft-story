@@ -195,7 +195,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'soft_story_parcels.topojson'"
+                      "Value": "'soft_story_dots.topojson'"
                     }
                   }
                 },
@@ -204,7 +204,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "soft_story_parcels.topojson"
+                      "ItemName": "soft_story_dots.topojson"
                     }
                   }
                 }

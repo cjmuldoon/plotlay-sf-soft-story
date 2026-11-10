@@ -42,8 +42,8 @@
           "type": "CustomTheme"
         },
         {
-          "name": "soft_story_parcels.topojson",
-          "path": "soft_story_parcels.topojson",
+          "name": "soft_story_dots.topojson",
+          "path": "soft_story_dots.topojson",
           "type": "ShapeMap"
         }
       ]
